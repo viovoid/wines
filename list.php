@@ -5,7 +5,6 @@
 		<th>Category 2</th>
 		<th>Category 3</th>
 		<th>Title</th>
-		<th>% ABV</th>
 		<th>Rating</th>
 		<th>Notes</th>
 	</tr>
@@ -16,7 +15,6 @@
 				'<td>'.$rev["c2"].'</td>'.
 				'<td>'.$rev["c3"].'</td>'.
 				'<td>'.$rev["title"].'</td>'.
-				'<td>'.$rev["abv"].'</td>'.
 				'<td>'.$rev["rating"].'</td>'.
 				'<td>'.$rev["notes"].'</td>'.
 			'</tr>';

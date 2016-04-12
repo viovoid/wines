@@ -57,9 +57,6 @@
 		Title:
 		<input type="text" name="title" />
 		<br>
-		ABV (%):
-		<input type="text" name="abv" />
-		<br>
 		Rating :
 		<input type="radio" name="rating" value="1" />1
 		<input type="radio" name="rating" value="2" />2

@@ -18,18 +18,21 @@ class Model {
 	function add() {
 		$db = $this->connect();
 
-		$this->escape($db);
-		$query = "INSERT INTO wines (cat1, cat2, cat3, title, abv, rating, notes)
+//XXX: prevents add...
+//		$this->escape($db);
+		$query = "INSERT INTO wines (cat1, cat2, cat3, title, rating, notes)
 						VALUES ('"
 							.$this->cat1."','"
 							.$this->cat2."','"
 							.$this->cat3."','"
 							.$this->title."','"
-							.$this->abv."','"
 							.$this->rating."','"
 							.$this->notes."');";
+echo $query;
 		$response = pg_query($db, $query);
-		return true;
+echo pg_last_error();
+
+		return $response;
 	}
 
 	function escape($db) {
@@ -37,7 +40,7 @@ class Model {
 		$this->cat2 = pg_escape_literal($db, $this->cat2);
 		$this->cat3 = pg_escape_literal($db, $this->cat3);
 		$this->title = pg_escape_literal($db, $this->title);
-		$this->abv = pg_escape_literal($db, $this->abv);
+//		$this->abv = pg_escape_literal($db, $this->abv);
 		$this->rating = pg_escape_literal($db, $this->rating);
 		$this->notes = pg_escape_literal($db, $this->notes);
 	}

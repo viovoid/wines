@@ -5,17 +5,22 @@
 	</style>
 </head>
 <?php
+	// edit a single wine
 	if($_SERVER['REQUEST_METHOD'] == 'GET') {
-
+		$controller = new Controller();
+	//	$controller->view($_GET["id"]);
 	}
 
+	// add a wine
 	if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$controller = new Controller();
 		if($_POST["pin"] == "3049") {
 			$controller->submit();
 			die();
-		} else
-		$controller->mode($_POST["mode"]);
+		} else {
+			// load the selected mode (add/view)
+			$controller->mode($_POST["mode"]);
+		}
 		die();
 	}
 ?>

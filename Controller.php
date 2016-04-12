@@ -40,10 +40,12 @@ class Controller {
 		$this->model->setCat2($_POST["cat2"]);
 		$this->model->setCat3($_POST["cat3"]);
 		$this->model->setTitle($_POST["title"]);
-		$this->model->setABV($_POST["abv"]);
+//		$this->model->setABV($_POST["abv"]);
 		$this->model->setRating($_POST["rating"]);
 		$this->model->setNotes($_POST["notes"]);
-		if($this->model->add()) {
+		$response = $this->model->add();
+var_dump($response);
+		if($response) {
 			include "confirm.php";
 		} else die("Error: Add failed!");
 	}
