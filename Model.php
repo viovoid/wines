@@ -2,9 +2,9 @@
 
 class Model {
 
-	protected $cat1 = "";
-	protected $cat2 = "";
-	protected $cat3 = "";
+	protected $cat1 = "0";
+	protected $cat2 = "0";
+	protected $cat3 = "0";
 	protected $title = "";
 	protected $abv = 0;
 	protected $rating = 0;

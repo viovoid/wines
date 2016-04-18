@@ -36,9 +36,15 @@ class Controller {
 	}
 
 	function submit() {
-		$this->model->setCat1($_POST["cat1"]);
-		$this->model->setCat2($_POST["cat2"]);
-		$this->model->setCat3($_POST["cat3"]);
+		if($_POST["cat1"] != "") {
+			$this->model->setCat1($_POST["cat1"]);
+		}
+		if($_POST["cat2"] != "") {
+			$this->model->setCat2($_POST["cat2"]);
+		}
+		if($_POST["cat3"] != "") {
+			$this->model->setCat3($_POST["cat3"]);
+		}
 		$this->model->setTitle($_POST["title"]);
 //		$this->model->setABV($_POST["abv"]);
 		$this->model->setRating($_POST["rating"]);
